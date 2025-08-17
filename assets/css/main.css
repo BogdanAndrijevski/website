@@ -3582,11 +3582,13 @@ input, select, textarea {
 			@media screen and (orientation: portrait) {
 
 				.banner.style1.fullscreen .content {
-					min-height: 50vh;
+					min-height: 22vh;
+					/* border: 4px solid red !important */
 				}
 
 				.banner.style1.fullscreen .image {
-					height: 50vh;
+					height: 78vh;
+					/* border: 4px solid red !important */
 				}
 
 			}
@@ -8601,3 +8603,17 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
+
+.xxx{
+	background-color: #30363d !important;
+	color: white !important;
+}			
+
+.xxx h1{
+	color: white !important;
+}	
+
+.xxx a{
+	color: cyan !important;
+}
