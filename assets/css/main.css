@@ -8617,3 +8617,10 @@ input, select, textarea {
 .xxx a{
 	color: cyan !important;
 }
+
+
+/* testing */
+
+.red-tape{
+	border: 1px solid red !important;
+}
