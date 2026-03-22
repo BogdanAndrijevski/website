@@ -8624,3 +8624,62 @@ input, select, textarea {
 .red-tape{
 	border: 1px solid red !important;
 }
+
+/* aaaaaaaaaaa */
+
+.right {
+  text-align: right;
+}
+
+/* .background-color-gray{
+    background-color: #30363d !important;
+	color: white !important
+	
+}
+.color-white{
+	color: white !important
+} */
+
+body{
+	 background-color: #30363d !important;
+	 color: white !important
+}
+
+h2{
+	color: white !important
+}
+
+.c-white{
+	color: white !important
+}
+
+/* for send button on the bottom */
+ul.actions.special li input.btn-white {
+    color: white !important;              
+    border: 2px solid white !important;
+}
+
+.border-white{
+	border: 1px solid white !important;
+}
+
+ul.icons li a.icon.brands.style2.fa-youtube,
+ul.icons li a.icon.brands.style2.fa-facebook-f,
+ul.icons li a.icon.brands.style2.fa-spotify,
+ul.icons li a.icon.brands.style2.fa-instagram {
+    color: white !important;      /* Makes the icon white */
+    border-color: white !important; /* If it has a border, make it white too */
+    background: transparent !important; /* Keep background transparent */
+}
+
+/* footer ul.icons li a {
+    color: white !important;
+}
+
+ul.icons li a.icon.brands.style2:hover {
+    color: #ccc !important;     
+} */
+
+.icon.style2:before {
+    box-shadow: inset 0 0 0 1px rgb(255, 255, 255) !important;
+}
