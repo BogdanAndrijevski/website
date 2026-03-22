@@ -630,28 +630,30 @@
 					<section class="wrapper style1 align-center">
 						<div class="inner medium">
 							<h2>Get in touch</h2>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field half">
-										<label class="c-white" for="name">Name</label>
-										<input class="border-white" type="text" name="name" id="name" value="" />
-									</div>
-									<div class="field half">
-										<label class="c-white" for="email">Email</label>
-										<input class="border-white" type="email" name="email" id="email" value="" />
-									</div>
-									<div class="field">
-										<label class="c-white" for="message">Message</label>
-										<textarea class="border-white" name="message" id="message" rows="6"></textarea>
-									</div>
+							<form method="POST" action="https://formspree.io/f/xvzwjabj">
+							<div class="fields">
+								<div class="field half">
+								<label class="c-white" for="name">Name</label>
+								<input class="border-white" type="text" name="name" id="name" required />
 								</div>
-								<ul class="actions special">
-									<li><input class="btn-white" type="submit" name="submit" id="submit" value="Send Message" /></li>
-								</ul>
+								<div class="field half">
+								<label class="c-white" for="email">Email</label>
+								<input class="border-white" type="email" name="email" id="email" required />
+								</div>
+								<div class="field">
+								<label class="c-white" for="message">Message</label>
+								<textarea class="border-white" name="message" id="message" rows="6" required></textarea>
+								</div>
+							</div>
+							<ul class="actions special">
+								<li>
+								<input class="btn-white" type="submit" value="Send Message" />
+								</li>
+							</ul>
+							<p id="form-success" style="color:white; display:none;">Thanks! Your message has been sent.</p>
 							</form>
-
 						</div>
-					</section>
+						</section>
 
 				<!-- Footer -->
 					<footer class="wrapper style1 align-center">
@@ -706,6 +708,31 @@
 			</div>
 
 		<!-- Scripts -->
+		 <script>
+			const form = document.querySelector('form');
+			const successMsg = document.getElementById('form-success');
+
+			form.addEventListener('submit', function(e) {
+				e.preventDefault();
+				const data = new FormData(form);
+
+				fetch(form.action, {
+				method: 'POST',
+				body: data,
+				headers: { 'Accept': 'application/json' }
+				}).then(response => {
+				if (response.ok) {
+					successMsg.style.display = 'block';
+					form.reset();
+				} else {
+					alert('Oops! There was a problem submitting your form.');
+				}
+				}).catch(error => {
+				alert('Oops! There was a problem submitting your form.');
+				});
+			});
+			</script>
+			
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
