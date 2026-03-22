@@ -8627,8 +8627,16 @@ input, select, textarea {
 
 /* aaaaaaaaaaa */
 
+/* Default: right-aligned */
 .right {
   text-align: right;
+}
+
+/* On small screens: center */
+@media (max-width: 768px) {
+  .right {
+    text-align: center;
+  }
 }
 
 /* .background-color-gray{
